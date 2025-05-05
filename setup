@@ -1,6 +1,22 @@
-# Homebrew setup
+# <<< Homebrew setup <<<
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-eval $(/opt/homebrew/bin/brew shellenv)
-# install pkg
-brew install neovim htop coreutils cmake ninja openjdk node llvm ghidra qemu ffmpeg oh-my-posh python3
+
+echo >> ~/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 brew analytics off
+# >>> Homebrew setup >>>
+
+# >>> Install Rosetta >>>
+sudo softwareupdate --install-rosetta
+# <<< Install Rosetta <<<
+
+# >>> Install Starter Packages >>>
+brew install neovim htop coreutils cmake ninja openjdk node llvm ghidra qemu ffmpeg oh-my-posh python3 cmake-docs
+
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+echo 'export PATH="/opt/homebrew/opt/llvm/bin:$PATH"' >> ~/.zshrc
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+# <<< Install Starter Packages <<< 
