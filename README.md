@@ -1,1 +1,1 @@
-# macOS_setup
+# Macos Generic setup files
