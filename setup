@@ -6,6 +6,8 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew analytics off
+
+brew update && brew upgrade
 # >>> Homebrew setup >>>
 
 # >>> Install Rosetta >>>
