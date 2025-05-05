@@ -2,5 +2,5 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval $(/opt/homebrew/bin/brew shellenv)
 # install pkg
-brew install neovim htop coreutils cmake ninja openjdk node llvm ghidra qemu ffmpeg 
+brew install neovim htop coreutils cmake ninja openjdk node llvm ghidra qemu ffmpeg oh-my-posh python3
 brew analytics off
